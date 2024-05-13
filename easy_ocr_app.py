@@ -38,7 +38,7 @@ if file:
     st.image(image) #display
 
     # it will only detect the English and Turkish part of the image as text
-    reader = easyocr.Reader(['tr','en'], gpu=False) 
+    reader = easyocr.Reader(['de','en', 'pt'], gpu=False) 
     result = reader.readtext(np.array(image))  # turn image to numpy array
 
 
@@ -49,6 +49,7 @@ if file:
         pred_confidence = result[idx][2] 
         textdic_easyocr[pred_text] = {} 
         textdic_easyocr[pred_text]['pred_confidence'] = pred_confidence
+        textdic_easyocr[pred_text]['pred_coor'] = pred_coor
 
     # create a dataframe which shows the predicted text and prediction confidence
     df = pd.DataFrame.from_dict(textdic_easyocr).T
