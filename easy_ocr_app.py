@@ -1,15 +1,20 @@
 
 import os
 
-os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
-
 import pandas as pd
 import numpy as np
 import streamlit as st
 import easyocr
-# import PIL
 from PIL import Image, ImageDraw
 from matplotlib import pyplot as plt
+
+
+import PIL.Image    
+
+if not hasattr(PIL.Image, 'Resampling'):  # Pillow<9.0
+    PIL.Image.Resampling = PIL.Image
+
+os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
 
 # main title
