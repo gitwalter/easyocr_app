@@ -42,7 +42,7 @@ if file:
     image = Image.open(file) # read image with PIL library
     st.image(image) #display
 
-    # it will only detect the English and Turkish part of the image as text
+    # set languages for text recognition
     reader = easyocr.Reader(['de','en', 'pt'], gpu=False) 
     result = reader.readtext(np.array(image))  # turn image to numpy array
 
