@@ -29,11 +29,24 @@ easyocr_env/
 .venv/
 .env/
 
-# PyCharm
-.idea/
-
-# VS Code
+# IDE and editor files
 .vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Development containers
+.devcontainer/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
 # Jupyter Notebook
 .ipynb_checkpoints
@@ -44,15 +57,6 @@ easyocr_env/
 .env.development.local
 .env.test.local
 .env.production.local
-
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
 
 # Logs
 *.log
