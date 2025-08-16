@@ -1,7 +1,6 @@
-pandas
-numpy
-easyocr
-matplotlib
-streamlit
-pillow
-streamlit
+numpy==1.24.3
+pandas==2.0.3
+easyocr==1.7.0
+matplotlib==3.7.2
+streamlit==1.28.1
+pillow==10.0.1
